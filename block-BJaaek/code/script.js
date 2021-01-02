@@ -1,28 +1,42 @@
-let clickBtn = document.querySelector(".banner");
-let clickBtn2 = document.querySelector(".second");
-let text = document.querySelector(".text");
-let text2 = document.querySelector(".text2");
+let boxOne = document.querySelector(".first");
+let boxTwo = document.querySelector(".second");
 
-let colors = ["a", "b", "c", "d", "e", "f", 1, 2, 3, 4, 5, 6];
+function getRandomColor() {
+  let hexCharacters = [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f"
+  ];
 
-function setColor() {
-  let color = Math.floor(Math.random() * colors.length);
+  let color = "#";
   for (let i = 0; i < 6; i++) {
-    let hash = "#";
-    color += colors[i];
-    let colorValue = hash.concat(color);
-    text.style.backgroundColor = colorValue;
+    let randomNumber = Math.floor(Math.random() * 16);
+    color = color + hexCharacters[randomNumber];
   }
-}
-function setColor2() {
-  let color = Math.floor(Math.random() * colors.length);
-  for (let i = 0; i < 6; i++) {
-    let hash = "#";
-    color += colors[i];
-    let colorValue = hash.concat(color);
-    text2.style.backgroundColor = colorValue;
-  }
+  return color;
 }
 
-clickBtn.addEventListener("click", setColor);
-clickBtn2.addEventListener("mousemove", setColor2);
+function handleClick() {
+  let randomColor = getRandomColor();
+  boxOne.style.backgroundColor = randomColor;
+}
+function handleMouseMove() {
+  let randomColor = getRandomColor();
+  boxTwo.style.backgroundColor = randomColor;
+}
+
+boxOne.addEventListener("click", handleClick);
+boxTwo.addEventListener("mousemove", handleMouseMove);
