@@ -1,8 +1,17 @@
-let box = document.querySelectorAll(".box");
+let boxes = document.querySelector(".boxes");
 
-function generateNumber() {
-  let randomNumber = Math.floor(Math.random() * 500);
-  return randomNumber;
+for (let i = 0; i < 500; i++) {
+  let div = document.createElement("div");
+  div.classList.add("box");
+  let h3 = document.createElement("h3");
+  let randomNo = getRandomNumber(500);
+  h3.innerText = randomNo;
+  div.append(h3);
+  boxes.append(div);
+}
+
+function getRandomNumber(num) {
+  return Math.floor(Math.random() * num);
 }
 
 function generateColor() {
@@ -26,23 +35,19 @@ function generateColor() {
   ];
   let colors = "#";
   for (let i = 0; i < 6; i++) {
-    let ranNum = Math.floor(Math.random() * 16);
+    let ranNum = getRandomNumber(16);
     colors = colors + hexCharacters[ranNum];
   }
   return colors;
 }
 
-function handleColor() {
-  let getColor = generateColor();
-  box.style.backgroundColor = getColor;
+let allBoxes = document.querySelectorAll(".box");
+
+function handleMouseMove() {
+  allBoxes.forEach(box => {
+    box.style.backgroundColor = generateColor();
+    box.querySelector("h3").innerText = getRandomNumber(500);
+  });
 }
 
-function handleNumber() {
-  let getNumber = generateNumber();
-  box.innerText = getNumber;
-}
-
-box.forEach(ele => {
-  ele.addEventListener("mousemove", handleColor);
-  ele.addEventListener("mousemove", handleNumber);
-});
+boxes.addEventListener("mousemove", handleMouseMove);

@@ -33,6 +33,7 @@ img {
   max-width: 100%;
   height: auto;
 }
+
 .container {
   max-width: 1200px;
   width: 100%;
@@ -45,7 +46,7 @@ h1 {
   margin: 2rem;
 }
 
-.flex {
+.boxes {
   display: flex;
   justify-content: center;
   align-items: center;
