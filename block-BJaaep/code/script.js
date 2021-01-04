@@ -1,4 +1,4 @@
-let smallBoxes = document.querySelectorAll(".box");
+let smallBoxes = document.querySelectorAll(".boxes li");
 
 let bigBoxes = document.querySelector(".boxes1");
 
@@ -14,18 +14,12 @@ smallBoxes.forEach(ele =>
   })
 );
 
-function handleEvent(e) {
-  if (e.shiftKey === true) {
-    e.target.style.transform = "rotateY(0deg)";
-    let randomNumber = Math.floor(Math.random() * 12);
-    e.target.innerText = randomNumber;
-    setTimeout(() => {
-      e.target.style.transform = "rotateY(180deg)";
-      e.target.innerText = "";
-    }, 5000);
-  }
-}
-
 bigBoxes.addEventListener("click", function(event) {
-  handleEvent(event);
+  let text = event.target.dataset.text;
+  event.target.innerText = text;
+  event.target.style.transform = "rotateY(0deg)";
+  setTimeout(() => {
+    event.target.style.transform = "rotateY(180deg)";
+    event.target.innerText = "";
+  }, 5000);
 });
