@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href=" https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Rock Paper and Scissors</title>
+  </head>
+  <body>
+    <main>
+      <div>Score: <span class="score">0</span></div>
+      <section>
+        <div class="you">
+          YOU
+          <div class="players-choice"></div>
+        </div>
+        <div class="icons player-icons">
+          <div class="icon">
+            <i
+              class="fa fa-hand-rock-o"
+              data-text="rock"
+              aria-hidden="true"
+            ></i>
+          </div>
+          <div class="icon">
+            <i
+              class="fa fa-hand-paper-o"
+              data-text="paper"
+              aria-hidden="true"
+            ></i>
+          </div>
+          <div class="icon">
+            <i
+              class="fa fa-hand-scissors-o"
+              data-text="scissors"
+              aria-hidden="true"
+            ></i>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="comp">
+          COMPUTER
+          <div class="computers-choice"></div>
+        </div>
+        <div class="icons comp-icons">
+          <div class="icon">
+            <i
+              class="fa fa-hand-rock-o "
+              data-text="rock"
+              aria-hidden="true"
+            ></i>
+          </div>
+          <div class="icon">
+            <i
+              class="fa fa-hand-paper-o"
+              data-text="paper"
+              aria-hidden="true"
+            ></i>
+          </div>
+          <div class="icon">
+            <i
+              class="fa fa-hand-scissors-o"
+              data-text="scissors"
+              aria-hidden="true"
+            ></i>
+          </div>
+        </div>
+      </section>
+
+      <div class="winner"></div>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
