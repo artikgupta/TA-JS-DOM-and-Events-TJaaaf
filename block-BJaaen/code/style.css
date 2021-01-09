@@ -9,20 +9,21 @@ main {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  height: 90vh;
+  height: 100vh;
 }
 
-.you {
-  text-align: center;
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  display: flex;
+h1 {
+  margin-bottom: 2rem;
 }
+
+.you,
 .comp {
   text-align: center;
-  font-size: 3rem;
+  font-size: 1rem;
   margin-bottom: 1rem;
   display: flex;
+  justify-content: center;
+  margin-top: 1.3rem;
 }
 
 .icons {
@@ -32,22 +33,52 @@ main {
 }
 
 .icon i {
-  font-size: 8rem;
+  font-size: 5rem;
   margin-left: 1rem;
+}
+
+.active i {
   color: blue;
 }
 
 .winner {
   color: black;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .score {
   width: 2rem;
   color: black;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.score-box {
+  width: 17rem;
+  color: black;
+  font-size: 1.3rem;
+  font-weight: bold;
 }
 
 .players-choice,
 .computers-choice {
   margin-left: 1rem;
   text-transform: uppercase;
+  font-size: 1rem;
+}
+
+.box {
+  display: flex;
+  justify-content: space-between;
+  width: 17rem;
+  margin-top: 2rem;
+}
+
+button {
+  padding: 0 1.2rem;
+  font-size: 1.5rem;
+  color: white;
+  background-color: blue;
+  border: 0.1rem solid black;
 }

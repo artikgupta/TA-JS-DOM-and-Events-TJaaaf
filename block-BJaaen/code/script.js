@@ -1,8 +1,11 @@
 let playersChoice = document.querySelector(".players-choice");
 let cChoice = document.querySelector(".computers-choice");
 let playerIcons = document.querySelector(".player-icons");
+let computerIcons = document.querySelector(".comp-icons");
 let winner = document.querySelector(".winner");
 let score = document.querySelector(".score");
+let reset = document.querySelector(".reset");
+console.log(reset);
 
 // players Choice
 playerIcons.addEventListener("click", event => compareChoices(event));
@@ -12,7 +15,18 @@ function compareChoices(event) {
   let pChioce = event.target.dataset.text;
   let compChoice = computerChoice();
   playersChoice.innerText = [`${pChioce}`];
-  console.log(pChioce, compChoice);
+  playerIcons.querySelector(`.rock`).classList.remove("active");
+  playerIcons.querySelector(`.paper`).classList.remove("active");
+  playerIcons.querySelector(`.scissors`).classList.remove("active");
+
+  playerIcons.querySelector(`.${pChioce}`).classList.add("active");
+  // console.log(computerIcons);
+  computerIcons.querySelector(`.rock`).classList.remove("active");
+  computerIcons.querySelector(`.paper`).classList.remove("active");
+  computerIcons.querySelector(`.scissors`).classList.remove("active");
+
+  computerIcons.querySelector(`.${compChoice}`).classList.add("active");
+  // console.log(playerIcons);
   if (pChioce === compChoice) {
     winner.innerText = "Draw";
   } else if (pChioce === "rock" && compChoice === "paper") {
@@ -46,3 +60,9 @@ function computerChoice() {
   cChoice.innerText = [`${chioce}`];
   return chioce;
 }
+
+reset.addEventListener("click", () => {
+  pScore = 0;
+  cScore = 0;
+  score.innerText = `You: ${pScore}  Computer: ${cScore}`;
+});

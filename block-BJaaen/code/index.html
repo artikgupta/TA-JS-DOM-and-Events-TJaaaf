@@ -13,28 +13,29 @@
   </head>
   <body>
     <main>
-      <div>Score: <span class="score">0</span></div>
+      <h1>Rock Paper Scissors</h1>
+      <div class="score-box">Score: <span class="score">0</span></div>
       <section>
         <div class="you">
-          YOU
+          YOU :
           <div class="players-choice"></div>
         </div>
         <div class="icons player-icons">
-          <div class="icon">
+          <div class="icon rock">
             <i
               class="fa fa-hand-rock-o"
               data-text="rock"
               aria-hidden="true"
             ></i>
           </div>
-          <div class="icon">
+          <div class="icon paper">
             <i
               class="fa fa-hand-paper-o"
               data-text="paper"
               aria-hidden="true"
             ></i>
           </div>
-          <div class="icon">
+          <div class="icon scissors">
             <i
               class="fa fa-hand-scissors-o"
               data-text="scissors"
@@ -43,27 +44,27 @@
           </div>
         </div>
       </section>
-      <section>
+      <section class="computer">
         <div class="comp">
-          COMPUTER
+          COMPUTER :
           <div class="computers-choice"></div>
         </div>
         <div class="icons comp-icons">
-          <div class="icon">
+          <div class="icon rock">
             <i
               class="fa fa-hand-rock-o "
               data-text="rock"
               aria-hidden="true"
             ></i>
           </div>
-          <div class="icon">
+          <div class="icon paper">
             <i
               class="fa fa-hand-paper-o"
               data-text="paper"
               aria-hidden="true"
             ></i>
           </div>
-          <div class="icon">
+          <div class="icon scissors">
             <i
               class="fa fa-hand-scissors-o"
               data-text="scissors"
@@ -72,8 +73,10 @@
           </div>
         </div>
       </section>
-
-      <div class="winner"></div>
+      <div class="box">
+        <div class="winner"></div>
+        <button class="reset">Reset</button>
+      </div>
     </main>
     <script src="./script.js"></script>
   </body>
