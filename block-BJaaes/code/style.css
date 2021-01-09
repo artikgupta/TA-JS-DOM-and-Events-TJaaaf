@@ -35,3 +35,36 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.container {
+  padding: 2rem;
+  border: 3px solid black;
+  border-radius: 7px;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin: 0.65rem 0;
+}
+
+input {
+  padding: 0.65rem;
+}
+
+button {
+  margin-top: 2rem;
+  width: 100%;
+  padding: 0.65rem;
+}
