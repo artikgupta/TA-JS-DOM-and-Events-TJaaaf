@@ -44,8 +44,12 @@ form {
   height: 100vh;
 }
 
+h1 {
+  margin-bottom: 1rem;
+}
+
 .container {
-  padding: 2rem;
+  padding: 1rem 3rem;
   border: 3px solid black;
   border-radius: 7px;
 }

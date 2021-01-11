@@ -39,13 +39,14 @@ function handleSubmit(event) {
   } else if (containSymbol(emailEle.value)) {
     emailError = "Not a valid email";
     emailEle.nextElementSibling.innerText = emailError;
-  } else if (!isAllNumbers(phoneEle.value)) {
+  } else if (isAllNumbers(phoneEle.value)) {
     phoneError = "Phone number can only contain numbers";
     phoneEle.nextElementSibling.innerText = phoneError;
   } else if (passwordEle.value != ConfirmPasswordEle.value) {
     passwordError = "Password and confirm password must be same";
     ConfirmPasswordEle.nextElementSibling.innerText = passwordError;
   }
+  alert("User added sucessfully");
 }
 
 form.addEventListener("submit", handleSubmit);
