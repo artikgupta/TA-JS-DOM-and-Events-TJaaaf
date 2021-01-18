@@ -127,9 +127,7 @@ table {
   border-spacing: 0;
 }
 /*  */
-body {
-  /* background: grey; */
-}
+
 h1 {
   font-size: 4rem;
   text-align: center;
@@ -143,10 +141,10 @@ h1 {
 }
 .code {
   margin-top: 6rem;
-  padding: 3rem 0;
+  padding: 3.5rem 1rem;
   background-color: black;
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   border-radius: 10px;
   box-shadow: 10px 10px 8px #888888;
 }
@@ -171,7 +169,7 @@ button:hover {
   background-color: rgb(167, 161, 161);
 }
 .image {
-  smargin: 0 4rem;
+  margin: 0 4rem;
 }
 img {
   width: 12rem;
