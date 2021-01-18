@@ -116,7 +116,8 @@ function getRandomColor() {
 }
 
 function setRandomColor() {
-  code.style.backgroundColor = getRandomColor();
+  let div = document.querySelector(".code");
+  div.style.backgroundColor = getRandomColor();
 }
 
 handleClick();
